@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>ConsentText</key>
+        <dict>
+            <key>default</key>
+            <string>----SUNBA-91----</string>
+        </dict>
+        <key>PayloadContent</key>
+        <array>
+            <dict>
+                <key>AllowedProtocolMaskInDomesticRoaming</key>
+                <integer>3</integer>
+                <key>APNs</key>
+                <array>
+                    <dict>
+                        <key>AllowedProtocolMask</key>
+                        <integer>1</integer>
+                        <key>AllowedProtocolMaskInDomesticRoaming</key>
+                        <integer>1</integer>
+                        <key>AllowedProtocolMaskInRoaming</key>
+                        <integer>1</integer>
+                        <key>AuthenticationType</key>
+                        <string>CHAP</string>
+                        <key>DefaultProtocolMask</key>
+                        <integer>1</integer>
+                        <key>EnableXLAT464</key>
+                        <true />
+                        <key>Name</key>
+                        <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
+                        <key>Username</key>
+                        <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
+                    </dict>
+                </array>
+                <key>AttachAPN</key>
+                <dict>
+                    <key>AllowedProtocolMask</key>
+                    <integer>3</integer>
+                    <key>AuthenticationType</key>
+                    <string>PAP</string>
+                    <key>Name</key>
+                    <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
+                    <key>Username</key>
+                    <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
+                </dict>
+                <key>PayloadDisplayName</key>
+                <string>{{ lookup('community.general.random_string', length=15, override_special=hex_chars) }}-{{ Profile_name }}-{{ lookup('community.general.random_string', length=24, override_special=hex_chars) }}</string>
+                <key>PayloadIdentifier</key>
+                <string>{{ PaylodIdentifier.stdout }}</string>
+                <key>PayloadType</key>
+                <string>com.apple.cellular</string>
+                <key>PayloadUUID</key>
+                <string>{{ PaylodUUID.stdout }}</string>
+                <key>PayloadVersion</key>
+                <integer>1</integer>
+            </dict>
+        </array>
+        <key>AutomaticAntennaSearchAndConnect</key>
+        <true/>
+        <key>AutomaticNetworkConnection</key>
+        <true/>
+        <key>PreferredNetworks</key>
+        <array>
+            <string>432-11</string>
+            <string>IR-MCI</string>
+            <string>MCI</string>
+        </array>
+        <key>NetworkModePreference</key>
+        <array>
+            <string>5G</string>
+            <string>LTE</string>
+            <string>3G</string>
+        </array>
+        <key>PayloadDescription</key>
+        <string>SUNBA-91</string>
+        <key>PayloadDisplayName</key>
+        <string>iPhone 14 and 15 antena</string>
+        <key>PayloadIdentifier</key>
+        <string>{{ SecPaylodIdentifier.stdout }}</string>
+        <key>PayloadOrganization</key>
+        <string>iPhone 14 and 15 antena</string>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadUUID</key>
+        <string>{{ SecPaylodUUID.stdout }}</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+    </dict>
+</plist>

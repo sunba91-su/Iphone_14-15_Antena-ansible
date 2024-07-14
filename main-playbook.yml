@@ -1,0 +1,8 @@
+- name: "iPhone 14 & 15 profile generator to get antena"
+  hosts: localhost
+  vars_prompt:
+    - name: "Profile_name"
+      prompt: "Enter your preferred profile name"
+
+  roles:
+    - ProfileGenerator

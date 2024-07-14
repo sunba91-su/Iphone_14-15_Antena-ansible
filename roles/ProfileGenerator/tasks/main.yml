@@ -1,0 +1,20 @@
+- name: "Generate paylod identifier"
+  command: uuidgen -r
+  register: PaylodIdentifier
+- name: "Generate paylod UUID"
+  command: uuidgen -r
+  register: PaylodUUID
+- name: "Generate secondary paylod identifier"
+  command: uuidgen -r
+  register: SecPaylodIdentifier
+- name: "Generate secondary paylod UUID"
+  command: uuidgen -r
+  register: SecPaylodUUID
+- name: "Generate APN name"
+  debug:
+    var: query('community.general.random_string', length=12, override_special=hex_chars)
+  register: ApnName
+- name: "Generate profile"
+  template:
+    src: "{{ ProfileTemplatePath }}{{ ProfileTemplateName }}"
+    dest: "./{{ Profile_name }}.mobileconfig"

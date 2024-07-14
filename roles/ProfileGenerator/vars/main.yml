@@ -1,0 +1,3 @@
+ProfileTemplatePath: "templates/"
+ProfileTemplateName: "sunba91-v1.mobileconfig.j2"
+hex_chars: '0123456789ABCDEF'
