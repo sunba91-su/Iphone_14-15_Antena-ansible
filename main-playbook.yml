@@ -3,6 +3,6 @@
   vars_prompt:
     - name: "Profile_name"
       prompt: "Enter your preferred profile name"
-
+      private: false
   roles:
     - ProfileGenerator
