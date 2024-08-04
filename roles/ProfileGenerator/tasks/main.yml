@@ -16,5 +16,9 @@
   register: ApnName
 - name: "Generate profile"
   template:
-    src: "{{ ProfileTemplatePath }}{{ ProfileTemplateName }}"
+    src: "{{ ProfileTemplatePath }}{{ PrimaryProfileTemplateName }}"
     dest: "./{{ Profile_name }}.mobileconfig"
+- name: "Generate profile"
+  template:
+    src: "{{ ProfileTemplatePath }}{{ SecondaryProfileTemplateName }}"
+    dest: "./Primary{{ Profile_name }}.mobileconfig"

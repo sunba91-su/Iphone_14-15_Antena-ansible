@@ -1,3 +1,4 @@
 ProfileTemplatePath: "templates/"
-ProfileTemplateName: "sunba91-v1.mobileconfig.j2"
+PrimaryProfileTemplateName: "sunba91-v1.mobileconfig.j2"
+SecondaryProfileTemplateName: "sunba-custom.mobileconfig.j2"
 hex_chars: '0123456789ABCDEF'
