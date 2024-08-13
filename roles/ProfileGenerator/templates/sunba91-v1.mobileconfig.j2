@@ -16,15 +16,15 @@
                 <array>
                     <dict>
                         <key>AllowedProtocolMask</key>
-                        <integer>1</integer>
+                        <integer>2</integer>
                         <key>AllowedProtocolMaskInDomesticRoaming</key>
-                        <integer>1</integer>
+                        <integer>2</integer>
                         <key>AllowedProtocolMaskInRoaming</key>
-                        <integer>1</integer>
+                        <integer>2</integer>
                         <key>AuthenticationType</key>
                         <string>CHAP</string>
                         <key>DefaultProtocolMask</key>
-                        <integer>1</integer>
+                        <integer>2</integer>
                         <key>EnableXLAT464</key>
                         <true />
                         <key>Name</key>
@@ -38,7 +38,7 @@
                     <key>AllowedProtocolMask</key>
                     <integer>3</integer>
                     <key>AuthenticationType</key>
-                    <string>PAP</string>
+                    <string>CHAP</string>
                     <key>Name</key>
                     <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
                     <key>Username</key>
@@ -62,9 +62,9 @@
         <true/>
         <key>PreferredNetworks</key>
         <array>
-            <string>432-11</string>
             <string>IR-MCI</string>
             <string>MCI</string>
+            <string>432-11</string>
         </array>
         <key>NetworkModePreference</key>
         <array>
@@ -75,7 +75,7 @@
         <key>PayloadDescription</key>
         <string>SUNBA-91</string>
         <key>PayloadDisplayName</key>
-        <string>iPhone 14 and 15 antena</string>
+        <string>iPhone 14 and 15 antena-{{ Profile_name }}</string>
         <key>PayloadIdentifier</key>
         <string>{{ SecPaylodIdentifier.stdout }}</string>
         <key>PayloadOrganization</key>

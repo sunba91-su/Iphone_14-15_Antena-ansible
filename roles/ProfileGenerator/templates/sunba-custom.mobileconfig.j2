@@ -5,7 +5,7 @@
 		<key>ConsentText</key>
 		<dict>
 			<key>default</key>
-			<string>Use your Iphone as much as you want.   sunba91</string>
+			<string>dear {{ Profile_name }}, Use your Iphone as much as you want.   sunba91</string>
 		</dict>
 		<key>PayloadContent</key>
 		<array>
@@ -22,7 +22,7 @@
 						<key>AllowedProtocolMaskInRoaming</key>
 						<integer>3</integer>
 						<key>AuthenticationType</key>
-						<string>PAP</string>
+						<string>CHAP</string>
 						<key>DefaultProtocolMask</key>
 						<integer>3</integer>
 						<key>EnableXLAT464</key>
@@ -30,27 +30,27 @@
 						<key>Name</key>
 						<string>mcinet</string>
 						<key>ProxyServer</key>
-						<string>mcinet</string>
+						<string>{{ Profile_name }}mcinet</string>
 						<key>Username</key>
-						<string>mcinet</string>
+						<string>{{ Profile_name }}</string>
 					</dict>
 					<dict>
 						<key>AllowedProtocolMask</key>
-						<integer>1</integer>
+						<integer>3</integer>
 						<key>AllowedProtocolMaskInDomesticRoaming</key>
-						<integer>1</integer>
+						<integer>3</integer>
 						<key>AllowedProtocolMaskInRoaming</key>
-						<integer>1</integer>
+						<integer>3</integer>
 						<key>AuthenticationType</key>
 						<string>CHAP</string>
 						<key>DefaultProtocolMask</key>
-						<integer>1</integer>
+						<integer>2</integer>
 						<key>EnableXLAT464</key>
 						<false />
 						<key>Name</key>
-						<string>mcinet</string>
+						<string>{{ Profile_name }}mcinet</string>
 						<key>Username</key>
-						<string>mcinet</string>
+						<string>{{ Profile_name }}</string>
 					</dict>
 				</array>
 				<key>AttachAPN</key>
@@ -58,11 +58,11 @@
 					<key>AllowedProtocolMask</key>
 					<integer>3</integer>
 					<key>AuthenticationType</key>
-					<string>PAP</string>
+					<string>CHAP</string>
 					<key>Name</key>
-					<string>mcinet</string>
+					<string>{{ Profile_name }}mcinet</string>
 					<key>Username</key>
-					<string>mcinet</string>
+					<string>{{ Profile_name }}</string>
 				</dict>
 				<key>PayloadDisplayName</key>
 				<string>{{ lookup('community.general.random_string', length=15, override_special=hex_chars) }}-{{ Profile_name }}-{{ lookup('community.general.random_string', length=24, override_special=hex_chars) }}</string>
@@ -95,9 +95,9 @@
         <true/>
         <key>PreferredNetworks</key>
         <array>
-            <string>432-11</string>
             <string>IR-MCI</string>
             <string>MCI</string>
+            <string>432-11</string>
         </array>
         <key>NetworkModePreference</key>
         <array>
@@ -106,7 +106,7 @@
             <string>3G</string>
         </array>
 		<key>PayloadDisplayName</key>
-		<string>SUNBA91 profile for iphone 15 pro max to make it a cellphone</string>
+		<string>{{ Profile_name }}-SUNBA91 profile for iphone 15 pro max to make it a cellphone</string>
 		<key>PayloadIdentifier</key>
 		<string>{{ SecPaylodIdentifier.stdout }}</string>
 		<key>PayloadOrganization</key>
