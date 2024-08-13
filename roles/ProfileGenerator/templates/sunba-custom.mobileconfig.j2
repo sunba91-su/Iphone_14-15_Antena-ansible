@@ -16,41 +16,35 @@
 				<array>
 					<dict>
 						<key>AllowedProtocolMask</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>AllowedProtocolMaskInDomesticRoaming</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>AllowedProtocolMaskInRoaming</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>AuthenticationType</key>
 						<string>CHAP</string>
-						<key>DefaultProtocolMask</key>
-						<integer>3</integer>
 						<key>EnableXLAT464</key>
 						<true />
 						<key>Name</key>
-						<string>mcinet</string>
-						<key>ProxyServer</key>
 						<string>{{ Profile_name }}mcinet</string>
-						<key>Username</key>
-						<string>{{ Profile_name }}</string>
+						# <key>ProxyServer</key>
+						# <string>{{ Profile_name }}mcinet</string>
+						# <key>Username</key>
+						# <string>{{ Profile_name }}</string>
 					</dict>
 					<dict>
 						<key>AllowedProtocolMask</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>AllowedProtocolMaskInDomesticRoaming</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>AllowedProtocolMaskInRoaming</key>
-						<integer>3</integer>
+						<integer>2</integer>
 						<key>AuthenticationType</key>
 						<string>CHAP</string>
-						<key>DefaultProtocolMask</key>
-						<integer>2</integer>
 						<key>EnableXLAT464</key>
-						<false />
+						<true />
 						<key>Name</key>
 						<string>{{ Profile_name }}mcinet</string>
-						<key>Username</key>
-						<string>{{ Profile_name }}</string>
 					</dict>
 				</array>
 				<key>AttachAPN</key>
@@ -61,8 +55,6 @@
 					<string>CHAP</string>
 					<key>Name</key>
 					<string>{{ Profile_name }}mcinet</string>
-					<key>Username</key>
-					<string>{{ Profile_name }}</string>
 				</dict>
 				<key>PayloadDisplayName</key>
 				<string>{{ lookup('community.general.random_string', length=15, override_special=hex_chars) }}-{{ Profile_name }}-{{ lookup('community.general.random_string', length=24, override_special=hex_chars) }}</string>
@@ -101,7 +93,6 @@
         </array>
         <key>NetworkModePreference</key>
         <array>
-            <string>5G</string>
             <string>LTE</string>
             <string>3G</string>
         </array>
@@ -123,39 +114,39 @@
 			<true />
 			<key>VoiceRoaming</key>
 			<true />
-			<key>VPN</key>
-			<dict>
-				<key>OnDemandEnabled</key>
-				<integer>1</integer>
-				<key>OnDemandRules</key>
-				<array>
-					<dict>
-						<key>Action</key>
-						<string>Connect</string>
-						<key>ActionParameters</key>
-						<dict>
-							<key>Domains</key>
-							<array>
-								<string>432-11.ir-mci.ir</string>
-							</array>
-							<key>RequiredDNSServers</key>
-							<array>
-								<string>8.8.8.8</string>
-							</array>
-						</dict>
-					</dict>
-					<dict>
-						<key>Action</key>
-						<string>Connect</string>
-						<key>SSIDMatch</key>
-						<array>
-							<string>IR_MCI</string>
-						</array>
-					</dict>
-				</array>
-				<key>OnDemandRulesEnabled</key>
-				<integer>1</integer>
-			</dict>
+			# <key>VPN</key>
+			# <dict>
+			# 	<key>OnDemandEnabled</key>
+			# 	<integer>1</integer>
+			# 	<key>OnDemandRules</key>
+			# 	<array>
+			# 		<dict>
+			# 			<key>Action</key>
+			# 			<string>Connect</string>
+			# 			<key>ActionParameters</key>
+			# 			<dict>
+			# 				<key>Domains</key>
+			# 				<array>
+			# 					<string>432-11.ir-mci.ir</string>
+			# 				</array>
+			# 				<key>RequiredDNSServers</key>
+			# 				<array>
+			# 					<string>8.8.8.8</string>
+			# 				</array>
+			# 			</dict>
+			# 		</dict>
+			# 		<dict>
+			# 			<key>Action</key>
+			# 			<string>Connect</string>
+			# 			<key>SSIDMatch</key>
+			# 			<array>
+			# 				<string>IR_MCI</string>
+			# 			</array>
+			# 		</dict>
+			# 	</array>
+			# 	<key>OnDemandRulesEnabled</key>
+			# 	<integer>1</integer>
+			# </dict>
 		</dict>
 	</dict>
 </plist>
