@@ -25,24 +25,22 @@
                         <string>CHAP</string>
                         <key>DefaultProtocolMask</key>
                         <integer>2</integer>
-                        <key>EnableXLAT464</key>
-                        <true />
                         <key>Name</key>
                         <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
-                        # <key>Username</key>
-                        # <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
+                        <key>Username</key>
+                        <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
                     </dict>
                 </array>
                 <key>AttachAPN</key>
                 <dict>
                     <key>AllowedProtocolMask</key>
-                    <integer>3</integer>
+                    <integer>2</integer>
                     <key>AuthenticationType</key>
                     <string>CHAP</string>
                     <key>Name</key>
                     <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
-                    # <key>Username</key>
-                    # <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
+                    <key>Username</key>
+                    <string>{{ ApnName['query(\'community.general.random_string\', length=12, override_special=hex_chars)'][0] }}</string>
                 </dict>
                 <key>PayloadDisplayName</key>
                 <string>{{ lookup('community.general.random_string', length=15, override_special=hex_chars) }}-{{ Profile_name }}-{{ lookup('community.general.random_string', length=24, override_special=hex_chars) }}</string>
@@ -68,7 +66,6 @@
         </array>
         <key>NetworkModePreference</key>
         <array>
-            # <string>5G</string>
             <string>LTE</string>
             <string>3G</string>
         </array>

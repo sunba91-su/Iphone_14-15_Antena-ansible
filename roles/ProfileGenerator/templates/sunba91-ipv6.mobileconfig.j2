@@ -5,7 +5,7 @@
 		<key>ConsentText</key>
 		<dict>
 			<key>default</key>
-			<string>dear {{ Profile_name }}, Use your Iphone as much as you want.   sunba91</string>
+			<string>dear {{ Profile_name }}-primary, Use your Iphone as much as you want.   sunba91</string>
 		</dict>
 		<key>PayloadContent</key>
 		<array>
@@ -23,14 +23,12 @@
 						<integer>2</integer>
 						<key>AuthenticationType</key>
 						<string>CHAP</string>
-						<key>EnableXLAT464</key>
-						<true />
 						<key>Name</key>
 						<string>{{ Profile_name }}mcinet</string>
-						# <key>ProxyServer</key>
-						# <string>{{ Profile_name }}mcinet</string>
-						# <key>Username</key>
-						# <string>{{ Profile_name }}</string>
+						<key>ProxyServer</key>
+						<string>{{ Profile_name }}mcinet</string>
+						<key>Username</key>
+						<string>{{ Profile_name }}</string>
 					</dict>
 					<dict>
 						<key>AllowedProtocolMask</key>
@@ -41,8 +39,6 @@
 						<integer>2</integer>
 						<key>AuthenticationType</key>
 						<string>CHAP</string>
-						<key>EnableXLAT464</key>
-						<true />
 						<key>Name</key>
 						<string>{{ Profile_name }}mcinet</string>
 					</dict>
@@ -50,7 +46,7 @@
 				<key>AttachAPN</key>
 				<dict>
 					<key>AllowedProtocolMask</key>
-					<integer>3</integer>
+					<integer>2</integer>
 					<key>AuthenticationType</key>
 					<string>CHAP</string>
 					<key>Name</key>
@@ -114,39 +110,39 @@
 			<true />
 			<key>VoiceRoaming</key>
 			<true />
-			# <key>VPN</key>
-			# <dict>
-			# 	<key>OnDemandEnabled</key>
-			# 	<integer>1</integer>
-			# 	<key>OnDemandRules</key>
-			# 	<array>
-			# 		<dict>
-			# 			<key>Action</key>
-			# 			<string>Connect</string>
-			# 			<key>ActionParameters</key>
-			# 			<dict>
-			# 				<key>Domains</key>
-			# 				<array>
-			# 					<string>432-11.ir-mci.ir</string>
-			# 				</array>
-			# 				<key>RequiredDNSServers</key>
-			# 				<array>
-			# 					<string>8.8.8.8</string>
-			# 				</array>
-			# 			</dict>
-			# 		</dict>
-			# 		<dict>
-			# 			<key>Action</key>
-			# 			<string>Connect</string>
-			# 			<key>SSIDMatch</key>
-			# 			<array>
-			# 				<string>IR_MCI</string>
-			# 			</array>
-			# 		</dict>
-			# 	</array>
-			# 	<key>OnDemandRulesEnabled</key>
-			# 	<integer>1</integer>
-			# </dict>
+			<key>VPN</key>
+			<dict>
+				<key>OnDemandEnabled</key>
+				<integer>1</integer>
+				<key>OnDemandRules</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>Connect</string>
+						<key>ActionParameters</key>
+						<dict>
+							<key>Domains</key>
+							<array>
+								<string>432-11.ir-mci.ir</string>
+							</array>
+							<key>RequiredDNSServers</key>
+							<array>
+								<string>8.8.8.8</string>
+							</array>
+						</dict>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Connect</string>
+						<key>SSIDMatch</key>
+						<array>
+							<string>IR_MCI</string>
+						</array>
+					</dict>
+				</array>
+				<key>OnDemandRulesEnabled</key>
+				<integer>1</integer>
+			</dict>
 		</dict>
 	</dict>
 </plist>

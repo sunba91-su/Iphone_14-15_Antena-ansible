@@ -16,9 +16,9 @@
   register: ApnName
 - name: "Generate profile"
   template:
-    src: "{{ ProfileTemplatePath }}{{ PrimaryProfileTemplateName }}"
-    dest: "./{{ Profile_name }}.mobileconfig"
+    src: "{{ ProfileTemplatePath }}{{ IPV4ProfileTemplateName }}"
+    dest: "./{{ Profile_name }}-ipv4-{{ version }}.mobileconfig"
 - name: "Generate profile"
   template:
-    src: "{{ ProfileTemplatePath }}{{ SecondaryProfileTemplateName }}"
-    dest: "./Primary{{ Profile_name }}.mobileconfig"
+    src: "{{ ProfileTemplatePath }}{{ IPV6ProfileTemplateName }}"
+    dest: "./{{ Profile_name }}-ipv6-{{ version }}.mobileconfig"
